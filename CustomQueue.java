@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Queue;
 
 public class CustomQueue<T> {
     private int front= -1;
