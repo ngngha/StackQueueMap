@@ -21,19 +21,23 @@ public class CustomStack<T> {
     }
     //lấy và xóa ptu đầu ngăn xếp
     public T pop(){
-        if (!isEmpty()){
-//            top--;
-            stack.remove(stack.get(top));
-            size = top--;
+        T x;
+        if (isEmpty()){
+            return null;
+        }else {
+            x = stack.get(top);
+            stack.remove(x);
+            top--;
+            return x;
         }
-        return null;
     }
     //lấy ra ptu đầu ngăn xếp nhưng không xóa
     public T peek(){
-        if(!isEmpty()){
+        if(isEmpty()){
+            return null;
+        }else {
             return stack.get(top);
         }
-        return null;
     }
     public boolean isEmpty() {
         return (top==-1);
