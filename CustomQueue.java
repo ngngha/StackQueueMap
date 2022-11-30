@@ -31,14 +31,22 @@ public class CustomQueue<T> {
     }
     //xóa ptu đầu hàng đợi
     public T dequeue(){
-        if(!isEmpty()){
+        T x;
+        x = queue.get(front);
+        if(isEmpty()){
+            return null;
+        }else if(front == rear){
+            front = rear = -1;
+            queue.remove(x);
+            return x;
+        }else{
+            queue.remove(x);
             rear++;
+            return x;
         }
-        return null;
     }
 
     public boolean isEmpty(){
-//        boolean response = false;
         if(front == -1 && rear == -1){
             return true;
         }
