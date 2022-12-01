@@ -12,11 +12,11 @@ public class CustomQueue<T> {
     public String toString() {
         return "queue=" + queue;
     }
-
+    //thêm ptu vào hàng đợi
     public void add(T element) {
         queue.add(element);
     }
-
+    //xóa đi ptu đầu hàng đợi
     public T remove() {
         T x;
         x = queue.get(0);
@@ -27,15 +27,15 @@ public class CustomQueue<T> {
             return x;
         }
     }
-
-    public T front() {
+    //lấy ra ptu đầu ngăn xếp nhưng không xóa
+    public T getFirst() {
         if (isEmpty()){
             return null;
         }
         return queue.get(0);
     }
 
-    public T rear() {
+    public T getLast() {
         if (isEmpty()){
             return null;
         }
