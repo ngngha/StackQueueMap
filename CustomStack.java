@@ -52,30 +52,5 @@ public class CustomStack<T> {
         chuoi += String.valueOf(stack.get(top));
         return chuoi;
     }
-
-    public static void main(String[] args) {
-        CustomStack<Integer> S = new CustomStack<>(4);
-        S.push(0);
-        S.push(25);
-        S.push(21);
-        System.out.println("S after push data: "+S);
-        S.pop();
-        System.out.println("S after popping: "+ S);
-        System.out.println("Peek: "+ S.peek());
-        System.out.println(S.size);
-
-        CustomStack<String> S1 = new CustomStack<>(5);
-        S1.push("0");
-        S1.push("ha");
-        S1.push("hai");
-        S1.push("hia");
-        S1.push("ah");
-        S1.push("tim");
-        System.out.println("S after push data: "+S1);
-        System.out.println(S1.size);
-        S1.pop();
-        System.out.println("S after popping: "+ S1);
-        System.out.println("Peek: "+ S1.peek());
-        System.out.println(S1.size);
-    }
+    
 }
