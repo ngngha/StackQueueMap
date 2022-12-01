@@ -49,12 +49,9 @@ public class CustomQueue<T> {
         q2.add(2);
         System.out.println(q2);
         System.out.println(q2.getFirst());
-        System.out.println(q2.getLast());
         q2.remove();
         System.out.println(q2);
         System.out.println(q2.getFirst());
-        System.out.println(q2.getLast());
     }
-
 }
 
