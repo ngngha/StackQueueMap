@@ -27,7 +27,6 @@ public class CustomStack<T> {
     }
     
     Node top;
-    int size;
 
     public CustomStack() {
         top = null;
@@ -41,7 +40,6 @@ public class CustomStack<T> {
     public void push(T element) {
         Node node = new Node(element, top);
         top = node;
-        size++;
     }
     //lấy và xóa ptu đầu ngăn xếp
     public T pop() {
@@ -51,7 +49,6 @@ public class CustomStack<T> {
         } else {
             x = top.getData();
             top = top.getNext();
-            size--;
             return x;
         }
     }
