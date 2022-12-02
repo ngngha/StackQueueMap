@@ -1,56 +1,69 @@
-import java.util.ArrayList;
-
+//last in first out
 public class CustomStack<T> {
-    private int top;
-    private int size;
-    private ArrayList<T> stack;
-    //last in first out
-    public CustomStack(int size){
-        this.size = size;
-        stack = new ArrayList<>(size);
-        top = -1;
-    }
-    //đưa ptu vào đầu ngăn xếp
-    public void push(T element){
-        if(top + 1 == size){
-            System.out.println("Is Full");
-        }else {
-            top++;
-            stack.add(element);
+    private class Node {
+        T data;
+        Node next;
+
+        public Node(T data, Node next) {
+            this.data = data;
+            this.next = next;
+        }
+
+        public T getData() {
+            return data;
+        }
+
+        public void setData(T data) {
+            this.data = data;
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public void setNext(Node next) {
+            this.next = next;
         }
     }
+    
+    Node top;
+    int size;
+
+    public CustomStack() {
+        top = null;
+        size = 0;
+    }
+
+    public boolean isEmpty() {
+        return top == null;
+    }
+     //đưa ptu vào đầu ngăn xếp
+    public void push(T element) {
+        Node node = new Node(element, top);
+        top = node;
+        size++;
+    }
     //lấy và xóa ptu đầu ngăn xếp
-    public T pop(){
+    public T pop() {
         T x;
-        if (isEmpty()){
+        if (isEmpty()) {
             return null;
-        }else {
-            x = stack.get(top);
-            stack.remove(x);
-            top--;
+        } else {
+            x = top.getData();
+            top = top.getNext();
+            size--;
             return x;
         }
     }
     //lấy ra ptu đầu ngăn xếp nhưng không xóa
-    public T peek(){
-        if(isEmpty()){
+    public T peek() {
+        T x;
+        if (isEmpty()) {
             return null;
-        }else {
-            return stack.get(top);
+        } else {
+            x = top.getData();
+            return x;
         }
-    }
-    public boolean isEmpty() {
-        return (top==-1);
-    }
-    //trả về biểu diễn đối tượng dạng chuỗi
-    public String toString()
-    {
-        String chuoi = "";
-        for (int i = 0; i < top; i++) {
-            chuoi += String.valueOf(stack.get(i)) + ", ";
-        }
-        chuoi += String.valueOf(stack.get(top));
-        return chuoi;
     }
     
 }
