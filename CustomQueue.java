@@ -22,12 +22,13 @@ public class CustomQueue<T> {
 
         public Node() {
         }
-
+        
     }
     private Node head;
 
     public CustomQueue() {
     }
+    
     public boolean isEmpty() {
         return head == null;
     }
@@ -42,8 +43,8 @@ public class CustomQueue<T> {
             while (tempNode.getNext()!=null){
                 tempNode = tempNode.getNext();
             }
-                tempNode.setNext(x);
-                x.setData(element);
+            tempNode.setNext(x);
+            x.setData(element);
         }
     }
     public Node remove(){
@@ -62,16 +63,5 @@ public class CustomQueue<T> {
             return null;
         }
         return head.getData();
-    }
-
-    public static void main(String[] args) {
-        CustomQueue<Integer> q2 = new CustomQueue<>();
-        q2.add(7);
-        q2.add(8);
-        q2.add(9);
-        q2.add(10);
-        q2.remove();
-        System.out.println(q2.getHead());
-
     }
 }
