@@ -1,8 +1,7 @@
 4 tính chất OOP
 * Kế thừa
 1. Tính chất đó là?
-Khả năng 1 lớp được kế thừa các tính chất của 1 đối tượng và có thể mở rộng các đặc
-tính của nó.
+Khả năng 1 lớp được kế thừa các tính chất của 1 đối tượng và có thể mở rộng các đặc tính của nó.
 2. Tại sao cần tính chất đó? 
 Khả năng tái sử dụng giúp giảm độ phức tạp, tiện lợi cho việc lập trình.
 3. Tính chất đó dùng khi nào? 
@@ -14,24 +13,20 @@ Là khả năng một đối tượng có thể thực hiện 1 tác vụ theo n
 2. Tại sao cần tính chất đó? 
 Đạt được sự nhất quán trong hệ thống giúp chương trình uyển chuyển hơn.
 3. Tính chất đó dùng khi nào? 
-Khi thực hiện các yêu cầu giống nhau nhưng cách xử lý khác nhau, tăng khả năng đọc hiểu,
-tăng tính sử dụng của chương trình.
+Khi thực hiện các yêu cầu giống nhau nhưng cách xử lý khác nhau, tăng khả năng đọc hiểu, tăng tính sử dụng của chương trình.
 
 * Đóng gói
 1. Tính chất đó là?
 Là kỹ thuật ẩn giấu thông tin và hiển thị ra thông tin liên quan.
 2. Tại sao cần tính chất đó? 
-Giảm thiểu mức độ phức tạp phát triển phần mềm, giúp chương trình dễ quản lý và
-kiểm soát dữ liệu tốt hơn.
+Giảm thiểu mức độ phức tạp phát triển phần mềm, giúp chương trình dễ quản lý và kiểm soát dữ liệu tốt hơn.
 3. Tính chất đó dùng khi nào? 
 Tính đóng gói được sử dụng để bảo vệ trạng thái bên trong của đối tượng.
 
 * Trừu tượng
 1. Tính chất đó là?
-Một tiến trình ẩn các chi tiết trình triển khai và chỉ hiển thị tính năng tới 
-người dùng.
+Một tiến trình ẩn các chi tiết trình triển khai và chỉ hiển thị tính năng tới người dùng.
 2. Tại sao cần tính chất đó? 
 Để đạt được sự bảo mật trong phần mềm và nâng cao hiệu quả của hệ thống.
 3. Tính chất đó dùng khi nào? 
-Khi cần giảm bớt những thông tin yêu cầu giữa các đối tượng, giúp các tầng kết nối giao
-tiếp với nhau đơn giản hơn.
+Khi cần giảm bớt những thông tin yêu cầu giữa các đối tượng, giúp các tầng kết nối giao tiếp với nhau đơn giản hơn.
