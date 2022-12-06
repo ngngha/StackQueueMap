@@ -9,16 +9,19 @@ public class CustomMap<K, V>{
             this.value = value;
             this.prev = prev;
         }
-
     }
+    
     private Node node= null;
+    
     public CustomMap(){
 
     }
+    
     public void add(K key, V value){
         Node newNode = new Node(key, value, node);
         node = newNode;
     }
+    
     public V get(K key){
         for (Node n = node; node != null; n = node.prev){
             if(key.equals(n.key)){
@@ -28,6 +31,7 @@ public class CustomMap<K, V>{
         }
         return null;
     }
+    
     V remove(K key){
 
         for (Node n = node; node != null; n = node.prev){
@@ -42,6 +46,4 @@ public class CustomMap<K, V>{
         }
         return null;
     }
-
-
 }
