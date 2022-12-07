@@ -52,11 +52,11 @@ public class CustomMap<K, V>{
                 return remove.value;
             }
             if (currentNode.key == key){
-                Node<K, V> remove = currentNode;
                 node = currentNode.prev;
-                return remove.value;
+                return currentNode.value;
             }
         }
+        System.out.println("Key does not exist.");
         return null;
     }
 }
