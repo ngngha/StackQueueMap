@@ -46,7 +46,7 @@ public class CustomMap<K, V>{
     
     V remove(K key){
         for (Node<K, V> currentNode = node; currentNode != null; currentNode = currentNode.prev) {
-            if (currentNode.key == key) {
+            if (key.equals(currentNode.key)) {
                 node = currentNode.prev;
                 return currentNode.value;
             }
