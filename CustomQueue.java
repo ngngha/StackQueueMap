@@ -34,27 +34,27 @@ public class CustomQueue<T> {
     }
 
     public void add(T element){
-        Node x = new Node();
+        Node newNode = new Node();
         if (isEmpty()) {
-            head = x;
-            x.setData(element);
+            head = newNode;
+            newNode.setData(element);
         }else {
-            Node tempNode = head;
-            while (tempNode.getNext()!=null){
-                tempNode = tempNode.getNext();
+            Node currentNode = head;
+            while (currentNode.getNext()!=null){
+                currentNode = currentNode.getNext();
             }
-            tempNode.setNext(x);
-            x.setData(element);
+                currentNode.setNext(newNode);
+                newNode.setData(element);
         }
     }
     public Node remove(){
-        Node x;
+        Node node;
         if(isEmpty()){
             return null;
         }else {
-            x=head;
-            head = x.getNext();
-            return x;
+            node=head;
+            head = node.getNext();
+            return node;
         }
     }
 
