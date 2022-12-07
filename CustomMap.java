@@ -46,18 +46,15 @@ public class CustomMap<K, V>{
     
     V remove(K key){
         for (Node<K, V> currentNode = node; currentNode != null; currentNode = currentNode.prev) {
-            if (key.equals(currentNode.key)) {
-                node = currentNode.prev;
-                return currentNode.value;
+            if (currentNode.prev != null && currentNode.prev.key == key){
+                Node<K, V> remove = currentNode.prev;
+                currentNode.prev = currentNode.prev.prev;
+                return remove.value;
             }
-            if (currentNode.prev != null && currentNode.prev.key == key) {
-                Node<K, V> x = currentNode.prev.prev;
-                currentNode.prev = x;
-                return x == null ? null : x.value;
-            }
-            if (!containsKey(key)){
-                System.out.println("Key does not exist.");
-                return null;
+            if (currentNode.prev != null && currentNode.key == key){
+                Node<K, V> remove = currentNode;
+                node = currentNode.prev; ? currentNode = currentNode.prev;
+                return remove.value;
             }
         }
         return null;
