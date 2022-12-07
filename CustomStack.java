@@ -26,40 +26,41 @@ public class CustomStack<T> {
         }
     }
     
-    Node top;
+    private Node top;
 
     public CustomStack() {
-        top = null;
-        size = 0;
     }
 
     public boolean isEmpty() {
         return top == null;
     }
+    
      //đưa ptu vào đầu ngăn xếp
     public void push(T element) {
-        Node node = new Node(element, top);
-        top = node;
+        Node newNode = new Node(element, top);
+        top = newNode;
     }
+    
     //lấy và xóa ptu đầu ngăn xếp
     public T pop() {
-        T x;
+        T elementTop;
         if (isEmpty()) {
             return null;
         } else {
-            x = top.getData();
+            elementTop = top.getData();
             top = top.getNext();
-            return x;
+            return elementTop;
         }
     }
+    
     //lấy ra ptu đầu ngăn xếp nhưng không xóa
     public T peek() {
-        T x;
+        T elementTop;
         if (isEmpty()) {
             return null;
         } else {
-            x = top.getData();
-            return x;
+            elementTop = top.getData();
+            return elementTop;
         }
     }
     
