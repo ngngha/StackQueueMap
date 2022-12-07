@@ -14,34 +14,50 @@ public class CustomMap<K, V>{
     private Node node= null;
     
     public CustomMap(){
-
+    }
+    
+    public boolean containsKey(K key){
+        for (Node<K, V> currentNode = node; currentNode != null; currentNode = currentNode.prev) {
+            if (key.equals(currentNode.key)) {
+                return true;
+            }
+        }
+        return false;
     }
     
     public void add(K key, V value){
-        Node newNode = new Node(key, value, node);
-        node = newNode;
+        if (containsKey(key)){
+            System.out.println("Key already existed. Key must be unique.");
+        }else {
+            Node<K, V> newNode = new Node<>(key, value, node);
+            node = newNode;
+        }
     }
     
     public V get(K key){
-        for (Node n = node; node != null; n = node.prev){
-            if(key.equals(n.key)){
-                System.out.println(n.value);
-                return (V) n.value;
+        for (Node<K, V> currentNode = node; currentNode != null; currentNode = currentNode.prev) {
+            if (key.equals(currentNode.key)) {
+                System.out.println(currentNode.value);
+                return (V) currentNode.value;
             }
         }
         return null;
     }
     
     V remove(K key){
-
-        for (Node n = node; node != null; n = node.prev){
-            if (n.prev!=null && n.prev.key==key){
-                n.prev=n.prev.prev;
-                return (V) n.prev;
+        for (Node<K, V> currentNode = node; currentNode != null; currentNode = currentNode.prev) {
+            if (currentNode.key == key) {
+                node = currentNode.prev;
+                return currentNode.value;
             }
-            if(n.prev==null && n.key==key){
-                node = null;
-                return (V) n;
+            if (currentNode.prev != null && currentNode.prev.key == key) {
+                Node<K, V> x = currentNode.prev.prev;
+                currentNode.prev = x;
+                return x == null ? null : x.value;
+            }
+            if (!containsKey(key)){
+                System.out.println("Key does not exist.");
+                return null;
             }
         }
         return null;
