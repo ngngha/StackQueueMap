@@ -51,9 +51,9 @@ public class CustomMap<K, V>{
                 currentNode.prev = currentNode.prev.prev;
                 return remove.value;
             }
-            if (currentNode.prev != null && currentNode.key == key){
+            if (currentNode.key == key){
                 Node<K, V> remove = currentNode;
-                node = currentNode.prev; ? currentNode = currentNode.prev;
+                node = currentNode.prev;
                 return remove.value;
             }
         }
