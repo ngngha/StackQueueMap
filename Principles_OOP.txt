@@ -1,32 +1,33 @@
 4 tính chất OOP
 * Kế thừa
 1. Tính chất đó là?
-Khả năng 1 lớp được kế thừa các tính chất của 1 đối tượng và có thể mở rộng các đặc tính của nó.
+Khả năng các đối tượng có cùng tính chất, đặc điểm vật lý được kế thừa các tính chất chung. 
 2. Tại sao cần tính chất đó? 
-Khả năng tái sử dụng giúp giảm độ phức tạp, tiện lợi cho việc lập trình.
+Khả năng tái sử dụng code, mở rộng những đặc tính sẵn có mà không cần định nghĩa lại, tiện lợi cho việc lập trình.
 3. Tính chất đó dùng khi nào? 
-Khi class có chung logic thực hiện nhưng không thật sự giống nhau.
+Khi bạn muốn nâng cấp hệ thống, phát triển đặc tính riêng biệt cho từng đối tượng từ những cái có sẵn.
 
 * Đa hình
 1. Tính chất đó là?
-Là khả năng một đối tượng có thể thực hiện 1 tác vụ theo nhiều cách khác nhau.
+Là khả năng một đối tượng có thể thực hiện 1 tác vụ theo nhiều cách khác nhau hoặc có những cách thể hiện khác nhau.
 2. Tại sao cần tính chất đó? 
-Đạt được sự nhất quán trong hệ thống giúp chương trình uyển chuyển hơn.
+Đa hình cung cấp khả năng cho 1 phương pháp thực hiện những việc khác nhau trên cơ sở đối tượng mà nó tác động.
 3. Tính chất đó dùng khi nào? 
 Khi thực hiện các yêu cầu giống nhau nhưng cách xử lý khác nhau, tăng khả năng đọc hiểu, tăng tính sử dụng của chương trình.
 
 * Đóng gói
 1. Tính chất đó là?
-Là kỹ thuật ẩn giấu thông tin và hiển thị ra thông tin liên quan.
+Là kỹ thuật cho phép truy cập các giá trị của đối tượng tùy theo sự đồng ý của người viết ra lớp của đối tượng đó.
 2. Tại sao cần tính chất đó? 
-Giảm thiểu mức độ phức tạp phát triển phần mềm, giúp chương trình dễ quản lý và kiểm soát dữ liệu tốt hơn.
+Bảo vệ trạng thái bên trong, đảm bảo sự toàn vẹn của đối tượng.
 3. Tính chất đó dùng khi nào? 
-Tính đóng gói được sử dụng để bảo vệ trạng thái bên trong của đối tượng.
+Khi cần giới hạn phạm vi truy cập trong lập trình hướng đối tượng.
 
 * Trừu tượng
 1. Tính chất đó là?
-Một tiến trình ẩn các chi tiết trình triển khai và chỉ hiển thị tính năng tới người dùng.
+Là khả năng chương trình bỏ qua một số khía cạnh của thông tin mà nó trực tiếp làm việc lên.
 2. Tại sao cần tính chất đó? 
-Để đạt được sự bảo mật trong phần mềm và nâng cao hiệu quả của hệ thống.
+Có những tiêu chuẩn chung để đảm bảo người sử dụng tuân theo mới thực hiện tốt hệ thống, 
+không sử dụng sai mục đích mà mình tạo ra.
 3. Tính chất đó dùng khi nào? 
-Khi cần giảm bớt những thông tin yêu cầu giữa các đối tượng, giúp các tầng kết nối giao tiếp với nhau đơn giản hơn.
+Khi cần đảm bảo phần mềm phải chạy đúng, không bị sai lệch, toàn vẹn dữ liệu.
