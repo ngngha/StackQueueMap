@@ -1,33 +1,45 @@
 4 tính chất OOP
-* Kế thừa
-1. Tính chất đó là?
-Khả năng các đối tượng có cùng tính chất, đặc điểm vật lý được kế thừa các tính chất chung. 
-2. Tại sao cần tính chất đó? 
-Khả năng tái sử dụng code, mở rộng những đặc tính sẵn có mà không cần định nghĩa lại, tiện lợi cho việc lập trình.
-3. Tính chất đó dùng khi nào? 
-Khi bạn muốn nâng cấp hệ thống, phát triển đặc tính riêng biệt cho từng đối tượng từ những cái có sẵn.
-
-* Đa hình
-1. Tính chất đó là?
-Là khả năng một đối tượng có thể thực hiện 1 tác vụ theo nhiều cách khác nhau hoặc có những cách thể hiện khác nhau.
-2. Tại sao cần tính chất đó? 
-Đa hình cung cấp khả năng cho 1 phương pháp thực hiện những việc khác nhau trên cơ sở đối tượng mà nó tác động.
-3. Tính chất đó dùng khi nào? 
-Khi thực hiện các yêu cầu giống nhau nhưng cách xử lý khác nhau, tăng khả năng đọc hiểu, tăng tính sử dụng của chương trình.
-
 * Đóng gói
 1. Tính chất đó là?
-Là kỹ thuật cho phép truy cập các giá trị của đối tượng tùy theo sự đồng ý của người viết ra lớp của đối tượng đó.
+Là khả năng quản lý phạm vi truy cập tài nguyên của đối tượng. Trong java public là thành phần 
+công khai, truy cập tự do từ bên ngoài, protected thì chỉ truy cập được bên ngoài qua lớp được 
+kế thừa, default thì chỉ truy cập được trong package còn private chỉ có thể truy cập được trong
+chính lớp được khai báo đó. Sử dụng access modifier là cách để đóng gói và quản lý phạm vi truy
+cập tài nguyên.
 2. Tại sao cần tính chất đó? 
-Bảo vệ trạng thái bên trong, đảm bảo sự toàn vẹn của đối tượng.
+Bảo vệ trạng thái, thông tin bên trong, không để bên ngoài truy xuất trực tiếp và thay đổi tài
+nguyên của đối tượng tránh sự sai lệch, đảm bảo toàn vẹn tài nguyên của đối tượng.
 3. Tính chất đó dùng khi nào? 
-Khi cần giới hạn phạm vi truy cập trong lập trình hướng đối tượng.
+Khi cần ngăn việc gọi phương thức của lớp này tác động hay truy xuất dữ liệu của đối tượng của 
+lớp khác, ngăn ngừa việc gán giá trị không hợp lệ vào thành phần dữ liệu.
+
+* Kế thừa
+1. Tính chất đó là?
+Các đối tượng có cùng tính chất, đặc điểm, khả năng phục vụ cho công việc gì đó được kế thừa
+sử dụng lại các tính chất, đặc điểm, khả năng đó.
+2. Tại sao cần tính chất đó? 
+Khả năng tái sử dụng code, giảm chi phí kiểm thử, tiện lợi cho việc lập trình.
+3. Tính chất đó dùng khi nào? 
+Khi đóng gói đối tượng xong mà có 1 đối tượng khác cũng cùng tính chất đặc điểm cũng có khả năng
+phục vụ cho công việc đó thì ta kế thừa.
 
 * Trừu tượng
 1. Tính chất đó là?
-Là khả năng chương trình bỏ qua một số khía cạnh của thông tin mà nó trực tiếp làm việc lên.
+Là rút ra 1 khái niệm từ hình tượng cụ thể, tập trung vào cái cốt lõi của đối tượng.
 2. Tại sao cần tính chất đó? 
-Có những tiêu chuẩn chung để đảm bảo người sử dụng tuân theo mới thực hiện tốt hệ thống, 
-không sử dụng sai mục đích mà mình tạo ra.
+Ta có sẵn khái niệm để người sử dụng không sử dụng sai mục đích.
 3. Tính chất đó dùng khi nào? 
-Khi cần đảm bảo phần mềm phải chạy đúng, không bị sai lệch, toàn vẹn dữ liệu.
+Khi kế thừa bị phụ thuộc vào lớp cha, cho nên ta có tính trừu tượng để sàng lọc ra các khái niệm
+phương thức và thuộc tính cốt lõi mà khi nó được kế thừa từ đó dựa vào đó để viết ra, nâng cấp và
+bảo trì.
+
+* Đa hình
+1. Tính chất đó là?
+Là khái niệm mà một đối tượng có thể thực hiện 1 tác vụ theo nhiều cách khác nhau hoặc có những 
+cách thể hiện khác nhau.
+2. Tại sao cần tính chất đó? 
+Đa hình cung cấp khả năng cho 1 đối tượng thực hiện những việc giống nhau theo các cách khác nhau
+hoặc có các cách thể hiện khác nhau, tăng tính sử dụng của chương trình.
+3. Tính chất đó dùng khi nào? 
+Bổ trợ cho tính trừu tượng khi các khái niệm phương thức của một đối tượng có các cách thể hiện,
+hoặc biểu hiện khác nhau thì áp dụng tính đa hình để ghi đè và nạp chồng.
