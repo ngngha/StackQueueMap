@@ -15,8 +15,7 @@ lớp khác, ngăn ngừa việc gán giá trị không hợp lệ vào thành p
 
 * Kế thừa
 1. Tính chất đó là?
-Các đối tượng có cùng tính chất, đặc điểm, khả năng phục vụ cho công việc gì đó được kế thừa
-sử dụng lại các tính chất, đặc điểm, khả năng đó.
+Kế thừa là các đối tượng con kế thừa lớp cha có cùng tính chất, đặc điểm, khả năng phục vụ cho công việc cụ thể.
 2. Tại sao cần tính chất đó? 
 Khả năng tái sử dụng code, giảm chi phí kiểm thử, tiện lợi cho việc lập trình.
 3. Tính chất đó dùng khi nào? 
@@ -25,9 +24,9 @@ phục vụ cho công việc đó thì ta kế thừa.
 
 * Trừu tượng
 1. Tính chất đó là?
-Là rút ra 1 khái niệm từ hình tượng cụ thể, tập trung vào cái cốt lõi của đối tượng.
+Là rút ra 1 khái niệm từ hình tượng cụ thể, tập trung vào cái cốt lõi của đối tượng. Ẩn các chi tiết trình triể n khai và chỉ hiển thị tính năng tới người dùng. Giúp người sử dụng tập trung vào các khả năng mà object đó có thể làm. Người triển khai thì có thể implement theo nhiều cách khác nhau.
 2. Tại sao cần tính chất đó? 
-Ta có sẵn khái niệm để người sử dụng không sử dụng sai mục đích.
+Giảm độ phức tạp phát triển phần mềm, khả năng bảo trì dễ dàng hơn. Không ảnh hưởng đến tính đúng đắn của chương trình
 3. Tính chất đó dùng khi nào? 
 Khi kế thừa bị phụ thuộc vào lớp cha, cho nên ta có tính trừu tượng để sàng lọc ra các khái niệm
 phương thức và thuộc tính cốt lõi mà khi nó được kế thừa từ đó dựa vào đó để viết ra, nâng cấp và
